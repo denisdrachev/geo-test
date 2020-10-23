@@ -39,7 +39,7 @@ public class Controller {
     }
 
     @GetMapping(value = "/second")
-    public FeatureCollection second(@RequestParam("param") Boolean param) {
+    public FeatureCollection second(@RequestParam("param") boolean param) {
         log.info("[Request incoming: /second] [param: {}]", param);
         return featureManipulatorService.getFeatureCollectionWithColor(param);
     }

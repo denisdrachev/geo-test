@@ -17,7 +17,7 @@ public class ValidateExceptionHandler {
         return new ResponseEntity<>(new AwesomeException("Error. File not found"), HttpStatus.BAD_REQUEST);
     }
 
-    @ExceptionHandler({JsonMappingException.class, IncorrectInputException.class})
+    @ExceptionHandler({JsonMappingException.class, IncorrectInputException.class, IllegalArgumentException.class})
     protected ResponseEntity<AwesomeException> handleJsonMappingException(Exception e) {
         return new ResponseEntity<>(new AwesomeException("Incorrect input data"), HttpStatus.BAD_REQUEST);
     }
